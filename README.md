@@ -25,7 +25,14 @@
 
 ## 源码运行
 
-开发环境需要 Windows、Node.js 和 npm。源码运行依赖项目内的 `bin/ffmpeg.exe` 与 `bin/ffprobe.exe`。
+开发环境需要 Windows、Node.js、npm 和 Git LFS。源码运行依赖项目内的 `bin/ffmpeg.exe` 与 `bin/ffprobe.exe`，这两个大文件通过 Git LFS 管理。
+
+克隆源码后先确认 Git LFS 已启用：
+
+```powershell
+git lfs install
+git lfs pull
+```
 
 ```powershell
 npm install
