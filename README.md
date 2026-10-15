@@ -1,6 +1,6 @@
 # 视频拼接器
 
-## 小白用户直接下载
+## 一键下载
 
 [下载 Windows 免安装版 v1.3.1](https://github.com/xiaohuangya617/Flux-video-merge/releases/download/v1.3.1/video-merger-v1.3.1-windows-x64.zip)
 
