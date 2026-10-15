@@ -73,7 +73,7 @@ npm run electron:build
 
 ## 许可证
 
-作者原创源码采用 [MIT License](LICENSE)，署名为 `xhy`。
+作者原创源码采用 [MIT License](LICENSE)
 
 FFmpeg、FFprobe、Electron、Chromium、Vue、Pinia、Vite 及其他依赖属于第三方组件，按照各自许可证执行。请阅读 [第三方组件声明](THIRD-PARTY-NOTICES.md)，重新分发时保留相应许可和声明。
 
