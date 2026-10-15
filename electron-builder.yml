@@ -1,0 +1,24 @@
+appId: com.video.merger
+productName: 视频拼接器
+directories:
+  output: release
+  buildResources: resources
+# 用 node_modules 里已装好的 Electron 发行版打包，避免每次从 GitHub 重新下载
+electronDist: node_modules/electron/dist
+files:
+  - dist/**/*
+  - electron/**/*
+  - package.json
+  # 主进程只用 Node 内置模块 + Electron，不含任何 npm 运行时依赖；
+  # vue/pinia 已经被 Vite 打进 dist/assets，无需再随包复制（省约 15MB）
+  - "!node_modules/**/*"
+win:
+  target:
+    - target: dir
+      arch: [x64]
+  icon: resources/icon.png
+extraResources:
+  - from: bin/ffmpeg.exe
+    to: ffmpeg.exe
+  - from: bin/ffprobe.exe
+    to: ffprobe.exe

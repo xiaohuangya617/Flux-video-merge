@@ -1,17 +1,23 @@
-# 第三方组件许可说明
+# 第三方组件声明
 
-本发布包是编译后的 Windows 目录版，包含以下第三方组件：
+本文件只声明本仓库直接使用或随发布包分发的主要第三方组件。各组件的完整许可证文本和源码提供义务以对应上游项目为准。
 
-## Electron 和 Chromium
+## FFmpeg / FFprobe
 
-- Electron 运行时及其依赖遵循各自上游许可证。
-- 包内保留 `LICENSE.electron.txt` 和 `LICENSES.chromium.html`，重新分发时请一并保留。
+- 版本：7.1.1
+- 来源：`bin/ffmpeg.exe`、`bin/ffprobe.exe`
+- 构建标识：`full_build-www.gyan.dev`
+- 上游项目：https://ffmpeg.org/
+- 上游许可证说明：https://ffmpeg.org/legal.html
 
-## FFmpeg 和 FFprobe
+当前二进制的版本输出包含 `--enable-gpl --enable-version3`，因此重新分发时必须遵守该构建所适用的 GPL 和其他 FFmpeg 组件许可要求。FFmpeg 二进制不是本项目原创代码。
 
-- 内置版本：`7.1.1-full_build-www.gyan.dev`。
-- 程序内置的 `ffmpeg.exe` 和 `ffprobe.exe` 报告采用 GNU GPL version 3 or later。
-- FFmpeg 项目主页：[https://ffmpeg.org/](https://ffmpeg.org/)
-- GNU GPL v3 文本：[https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
+## Electron / Chromium
 
-第三方组件的许可证不被本项目的 MIT 声明覆盖。重新分发整个目录或制作衍生包时，请保留本文件、包内许可证文件和对应上游条款。
+- 版本：Electron 28.3.3（由 `package.json` 开发依赖指定）
+- 上游项目：https://www.electronjs.org/
+- Electron 许可证和 Chromium 第三方声明随 Electron 发行包提供；目录版发布包中的 `LICENSE.electron.txt` 与 `LICENSES.chromium.html` 应保留。
+
+## Vue / Pinia / Vite / TypeScript
+
+这些 JavaScript/TypeScript 依赖由 `package.json` 和 `package-lock.json` 管理。安装或重新分发时请按各自 npm 包的许可证执行。

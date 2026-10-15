@@ -1,0 +1,36 @@
+{
+  "name": "video-merger",
+  "version": "1.3.1",
+  "description": "视频拼接器 - 无损剪辑 · 参数对齐 · 批量合并",
+  "author": "xhy",
+  "license": "MIT",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "electron:dev": "concurrently -k \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "vite build && electron-builder --win --dir",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vite build && electron test/run.js",
+    "test:unit": "electron test/run.js unit",
+    "test:consistency": "electron test/run.js consistency",
+    "test:regression": "electron test/run.js regression",
+    "test:functional": "electron test/run.js functional",
+    "test:ui": "electron test/run.js ui"
+  },
+  "dependencies": {
+    "pinia": "^2.2.2",
+    "vue": "^3.4.38"
+  },
+  "devDependencies": {
+    "@ffprobe-installer/ffprobe": "^2.1.2",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "concurrently": "^8.2.2",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2",
+    "vue-tsc": "^2.0.29",
+    "wait-on": "^7.2.0"
+  }
+}

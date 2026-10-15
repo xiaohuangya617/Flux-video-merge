@@ -5,3 +5,4 @@
 - 发布 Windows 免安装目录版。
 - 内置 Electron 运行时、FFmpeg 7.1.1 和 FFprobe 7.1.1。
 - 支持视频参数检查、自动对齐、无损规整、必要时转码和输出校验。
+- 补充可审查的 Vue/TypeScript + Electron 源码发布内容。
